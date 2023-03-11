@@ -8,10 +8,26 @@ export class Dog {
     }
 
     bark(): string {
-        return 'one!'
+        return 'bow!'
     }
 
-    test() {
-        console.log('test')
+    barkAllow = (): string => {
+        return 'bow!'
+    }
+
+    eat = (): Promise<string> => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('eat!')
+            }, 100)
+        })
+    }
+
+    drink = async () => {
+        return 'drink!'
+    }
+
+    feel() {
+        console.log('feel')
     }
 }
